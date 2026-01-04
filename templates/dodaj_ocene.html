@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj ocenę</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>➕ Dodaj ocenę</h1>
+</header>
+
+<div class="container">
+    <form method="post" class="card">
+        <input name="uczen_id" placeholder="ID ucznia" required><br><br>
+        <input name="przedmiot_id" placeholder="ID przedmiotu" required><br><br>
+        <input name="ocena" placeholder="Ocena (1-6)" required><br><br>
+        <button class="button" type="submit">Zapisz</button>
+    </form>
+</div>
+
+</body>
+</html>

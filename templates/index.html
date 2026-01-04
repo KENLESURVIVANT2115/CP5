@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>System ocen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>📘 System ocen uczniów</h1>
+    <a class="button" href="/dodaj">➕ Dodaj ocenę</a>
+</header>
+
+<div class="container">
+    {% for o in oceny %}
+    <div class="card">
+        <h3>{{ o[0] }} {{ o[1] }}</h3>
+        <p><strong>Przedmiot:</strong> {{ o[2] }}</p>
+        <p><strong>Ocena:</strong> {{ o[3] }}</p>
+        <p><small>{{ o[4] }}</small></p>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
